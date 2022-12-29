@@ -24,7 +24,11 @@ const ConfirmData = ({ child_userdata }) => {
 		world: '',
 		premium: '',
 	});
-	const [myid, setId] = useState({});
+	const [myid, setId] = useState(() => {
+		const storedvalues = localStorage.getItem('profile');
+		if (!storedvalues) return [];
+		return JSON.parse(storedvalues);
+	});
 	const prevData = useRef({});
 	const {
 		main: { loading, loader, userInfo },

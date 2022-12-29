@@ -8,15 +8,14 @@ export const createPlan = async (
 ) => {
 	try {
 		if (plan.userId) {
-			if (plan.free.length > 0) {
-				console.log(plan.free);
+			if (plan?.free?.length > 0) {
+				console.log(plan?.free);
 				setTimeout(() => {
 					setMainContext({ type: 'PLAN' });
-
+					window.location.reload();
 					navigate('/');
 				}, 2000);
-				window.location.reload();
-				navigate('/');
+
 				await API.put(
 					`${baseUrl}/user/v2/package/${plan.userId}`,
 					plan,
