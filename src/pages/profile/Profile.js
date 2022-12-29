@@ -225,7 +225,7 @@ const Profile = ({ child_userdata }) => {
 								<h5>
 									Username:
 									<span style={{ color: 'lightgrey', opacity: '.6' }}>
-										{username}
+										{prof?.username}
 									</span>
 								</h5>
 								<p>
@@ -233,7 +233,7 @@ const Profile = ({ child_userdata }) => {
 									Email Address:
 									<span style={{ color: 'lightgrey', opacity: '.6' }}>
 										{' '}
-										{child_userdata?.result?.email}
+										{prof?.email}
 									</span>
 								</p>
 								<p>
@@ -594,7 +594,7 @@ const Profile = ({ child_userdata }) => {
 						<Box style={{ color: 'red', textAlign: 'center' }}></Box>
 						<Box sx={{ marginTop: '2rem' }}>
 							<Button
-								disabled={loading}
+								disabled={loading || disable}
 								onClick={update_acc}
 								variant="outlined"
 								sx={{

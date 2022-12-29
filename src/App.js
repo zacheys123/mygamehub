@@ -77,17 +77,7 @@ function App() {
 						<hr style={{ width: '95%', margin: 'auto' }} />
 						<ToastContainer />
 						<Routes>
-							<Route
-								exact
-								path="/summary"
-								element={
-									user?.result?._id ? (
-										<AllGames />
-									) : (
-										<Navigate to="/login" />
-									)
-								}
-							/>
+							<Route exact path="/summary" element={<AllGames />} />
 							<Route
 								exact
 								path="/standings"

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f6284b06.css",
-    "main.js": "/static/js/main.f751b780.js",
+    "main.js": "/static/js/main.21c61f79.js",
     "static/media/darksouls.jpg": "/static/media/darksouls.fba005dadc8ff014acc0.jpg",
     "static/media/dark.jpg": "/static/media/dark.78b9b72a6fa7e936dc50.jpg",
     "static/media/lone.jpg": "/static/media/lone.39783a0e4f8f95d2b195.jpg",
@@ -38,10 +38,10 @@
     "static/media/fifa.jpg": "/static/media/fifa.750ed4168c16d1e1e789.jpg",
     "index.html": "/index.html",
     "main.f6284b06.css.map": "/static/css/main.f6284b06.css.map",
-    "main.f751b780.js.map": "/static/js/main.f751b780.js.map"
+    "main.21c61f79.js.map": "/static/js/main.21c61f79.js.map"
   },
   "entrypoints": [
     "static/css/main.f6284b06.css",
-    "static/js/main.f751b780.js"
+    "static/js/main.21c61f79.js"
   ]
 }
