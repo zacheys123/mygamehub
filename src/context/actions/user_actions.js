@@ -27,8 +27,8 @@ export const update_user = async (
 			});
 
 			setTimeout(() => {
-				window.location.reload();
 				navigate('/');
+				window.location.reload();
 			}, 5000);
 		}, 3000);
 		setMainContext({ type: 'UPDATE_LOADING' });

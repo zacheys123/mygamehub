@@ -594,7 +594,7 @@ const Profile = ({ child_userdata }) => {
 						<Box style={{ color: 'red', textAlign: 'center' }}></Box>
 						<Box sx={{ marginTop: '2rem' }}>
 							<Button
-								disabled={loading || disable}
+								disabled={loading || !disable}
 								onClick={update_acc}
 								variant="outlined"
 								sx={{

@@ -12,8 +12,8 @@ export const createPlan = async (
 				console.log(plan?.free);
 				setTimeout(() => {
 					setMainContext({ type: 'PLAN' });
-					window.location.reload();
 					navigate('/');
+					window.location.reload();
 				}, 2000);
 
 				await API.put(
