@@ -153,9 +153,7 @@ const Game = (props) => {
 		}
 		return () => (data.current = false);
 	}, []);
-	useEffect(() => {
-		Aos.init({ duration: 2000 });
-	}, []);
+
 	useEffect(() => {
 		data.current = false;
 		return () => (data.current = false);
@@ -177,156 +175,156 @@ const Game = (props) => {
 			<Box className="maingames__container">
 				{showfifa ? (
 					<Box className="choice">
-						<div data-aos="zoom-in" ref={fifaref} onClick={fifaMode}>
+						<div ref={fifaref} onClick={fifaMode}>
 							<img src={fifaimg} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								FIFA football
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={ghost}>
+						<div ref={ghost}>
 							<img src={ghostrec} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Ghost_Recon
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={god}>
+						<div ref={god}>
 							<img src={gods} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								God of war
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={res}>
+						<div ref={res}>
 							<img src={resident} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Resident Evil 2
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={gtaref}>
+						<div ref={gtaref}>
 							<img src={gtaimg} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								{' '}
 								Grand Theft Auto V
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={unchartered}>
+						<div ref={unchartered}>
 							<img src={nathan} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								{' '}
 								Uncharted: The Nathan Drake Collection
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={fort}>
+						<div ref={fort}>
 							<img src={fortref} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Fortnite
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={uncharted4}>
+						<div ref={uncharted4}>
 							<img src={unchart4} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								{' '}
 								Uncharted 4: A Thief's End
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={tomb}>
+						<div ref={tomb}>
 							<img src={tombraid} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Tomb Raider:Lara Croft
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={pacificrim}>
+						<div ref={pacificrim}>
 							<img src={pacific} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Pacific Rim
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={spider}>
+						<div ref={spider}>
 							<img src={spiderref} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Spider-Man
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={last}>
+						<div ref={last}>
 							<img src={lastimg} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								The Last Of Us
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={jumanjiref}>
+						<div ref={jumanjiref}>
 							<img src={jumanji} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Jumanji The Video Game
 							</Typography>
 						</div>
 
-						<div data-aos="zoom-in" ref={callref}>
+						<div ref={callref}>
 							<img src={cod} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Call Of Duty
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={witcher}>
+						<div ref={witcher}>
 							<img src={witch} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Witcher
 							</Typography>
 						</div>
 						{/*  */}
-						<div data-aos="zoom-in" ref={nbaref}>
+						<div ref={nbaref}>
 							<img src={nba} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Nba 2K{' '}
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={assasref}>
+						<div ref={assasref}>
 							<img src={assasins} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Assasins Creed Unity/Valhalla
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={wweref}>
+						<div ref={wweref}>
 							<img src={wwe} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								WWE 2k
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={avengersref}>
+						<div ref={avengersref}>
 							<img src={avengers} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Avengers
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={tushimaref}>
+						<div ref={tushimaref}>
 							<img src={tushima} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Ghost of Tushima
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={mordernref}>
+						<div ref={mordernref}>
 							<img src={mordern} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Modern Warfare
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={immortalsref}>
+						<div ref={immortalsref}>
 							<img src={immortals} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Immortal Fenyx Rising
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={controlref}>
+						<div ref={controlref}>
 							<img src={control} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Control
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={jumanjiref}>
+						<div ref={jumanjiref}>
 							<img src={jumanji} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Jumanji The Video Game
 							</Typography>
 						</div>
-						<div data-aos="zoom-in" ref={metroref}>
+						<div ref={metroref}>
 							<img src={metro} alt="" />
 							<Typography sx={{ color: 'yellow' }} variant="body">
 								Metro Redux

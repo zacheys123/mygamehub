@@ -41,8 +41,8 @@
 .lessnav {
 	display: flex;
 	background: white;
-	height: 65vh;
-	margin-top: 2rem;
+
+	margin-top: 1.2rem;
 	flex-direction: column;
 	position: absolute;
 }
@@ -135,7 +135,7 @@ img {
 	margin-left: 1rem;
 }
 /* For tablet and ipad */
-@media screen and (min-width: 480px) and (max-width: 768) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
 	.menu {
 		display: none;
 	}
@@ -155,6 +155,18 @@ img {
 		height: 40px !important;
 		width: 40px !important;
 		border-radius: 50%;
+	}
+	.lessnav {
+		height: 72vh;
+	}
+	.about {
+		display: none;
+	}
+	.conta {
+		display: none;
+	}
+	.contacts {
+		display: block;
 	}
 }
 /* For Mobile phones */
@@ -181,6 +193,12 @@ img {
 	}
 	.logo > img {
 		font-size: 0.8rem !important;
+	}
+	.lessnav {
+		height: 72vh;
+	}
+	.morenav {
+		overflow-x: scroll;
 	}
 }
 

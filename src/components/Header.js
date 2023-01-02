@@ -118,249 +118,252 @@ const Header = (props) => {
 							onClick={() => setMore((prev) => !prev)}
 						/>
 					)}
+
 					{moreinfo && (
-						<motion.div
-							initial={{ x: '-200px' }}
-							animate={{
-								x: '-13px',
-								y: '1.5rem',
-								transition: { duration: 0.8 },
-							}}
-							exit={{
-								x: '0',
-								y: '1.5rem',
-								transition: { duration: 1 },
-							}}
-							className="lessnav"
-							style={{
-								background: !istheme ? 'rgb(28, 4, 4)' : 'white',
-								zIndex: 1,
-							}}
-						>
-							<Link
-								ref={game}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/game"
+						<Box className="morenav">
+							<motion.div
+								initial={{ x: '-200px' }}
+								animate={{
+									x: '-13px',
+									y: '1.5rem',
+									transition: { duration: 0.8 },
+								}}
+								exit={{
+									x: '0',
+									y: '1.5rem',
+									transition: { duration: 1 },
+								}}
+								className="lessnav"
+								style={{
+									background: !istheme ? 'rgb(28, 4, 4)' : 'white',
+									zIndex: 1,
+								}}
 							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+								<Link
+									ref={game}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/game"
 								>
-									Game
-								</Button>
-							</Link>
-							<li
-								ref={summary}
-								className={user?.result?._id ? 'item' : 'disabled'}
-							>
-								{' '}
-								<Button
-									onClick={() => {
-										setMore((prev) => !prev);
-										window.open('/summary');
-									}}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Game
+									</Button>
+								</Link>
+								<li
+									ref={summary}
+									className={user?.result?._id ? 'item' : 'disabled'}
 								>
-									Summary
-								</Button>
-							</li>
-							<Link
-								ref={league}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/standings"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => {
+											setMore((prev) => !prev);
+											window.open('/summary');
+										}}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Summary
+									</Button>
+								</li>
+								<Link
+									ref={league}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/standings"
 								>
-									League Standings
-								</Button>
-							</Link>
-							<Link
-								ref={ranking}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/ranking"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										League Standings
+									</Button>
+								</Link>
+								<Link
+									ref={ranking}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/ranking"
 								>
-									Player Ranking
-								</Button>
-							</Link>
-							<Link
-								ref={vids}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/vids"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Player Ranking
+									</Button>
+								</Link>
+								<Link
+									ref={vids}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/vids"
 								>
-									Watch Videos
-								</Button>
-							</Link>
-							<Link
-								ref={access}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/access-saved"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Watch Videos
+									</Button>
+								</Link>
+								<Link
+									ref={access}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/access-saved"
 								>
-									Access Saved Videos
-								</Button>
-							</Link>
-							<Link
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/theme"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Access Saved Videos
+									</Button>
+								</Link>
+								<Link
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/theme"
 								>
-									Change Theme
-								</Button>
-							</Link>
-							<Link
-								ref={chat}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/chat"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Change Theme
+									</Button>
+								</Link>
+								<Link
+									ref={chat}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/chat"
 								>
-									Create A Chat Room
-								</Button>
-							</Link>
-							<Link
-								ref={share}
-								className={user?.result?._id ? 'item' : 'disabled'}
-								to="/share"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Create A Chat Room
+									</Button>
+								</Link>
+								<Link
+									ref={share}
+									className={user?.result?._id ? 'item' : 'disabled'}
+									to="/share"
 								>
-									Share Videos
-								</Button>
-							</Link>
-							<Link
-								className={
-									user?.result?._id ? 'item about' : 'disabled'
-								}
-								to="/standings"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Share Videos
+									</Button>
+								</Link>
+								<Link
+									className={
+										user?.result?._id ? 'item about' : 'disabled'
+									}
+									to="/standings"
 								>
-									About Us
-								</Button>
-							</Link>
-							<Link
-								className={
-									user?.result?._id ? 'item contacts' : 'disabled'
-								}
-								to="/standings"
-							>
-								{' '}
-								<Button
-									onClick={() => setMore((prev) => !prev)}
-									style={{
-										color: !istheme ? 'white' : 'darkgreen',
-										border: !istheme
-											? '1px solid lightgrey'
-											: '1px solid violet',
-									}}
-									variant="outlined"
-									size="small"
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										About Us
+									</Button>
+								</Link>
+								<Link
+									className={
+										user?.result?._id ? 'item contacts' : 'disabled'
+									}
+									to="/standings"
 								>
-									Contact Us
-								</Button>
-							</Link>
-						</motion.div>
+									{' '}
+									<Button
+										onClick={() => setMore((prev) => !prev)}
+										style={{
+											color: !istheme ? 'white' : 'darkgreen',
+											border: !istheme
+												? '1px solid lightgrey'
+												: '1px solid violet',
+										}}
+										variant="outlined"
+										size="small"
+									>
+										Contact Us
+									</Button>
+								</Link>
+							</motion.div>
+						</Box>
 					)}
 				</Box>
 
@@ -433,7 +436,7 @@ const Header = (props) => {
 									marginLeft: '1.3rem',
 									textDecoration: 'none',
 								}}
-								className="butt"
+								className="butt conta"
 								onClick={contacts}
 								to=""
 							>

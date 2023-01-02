@@ -384,44 +384,10 @@
 	font-weight: bold;
 	color: lightblue;
 }
-@media screen and (min-width: 1200px) {
-	.fixtures__data {
-		height: 2rem;
-	}
-	.header__fixture {
-		height: 4rem;
-	}
-	.header__fixture > img {
-		height: 1.9rem !important;
-		width: 1.9rem !important;
-	}
-	img {
-		height: 1.7rem;
-		width: 1.7rem;
-	}
-}
 
 /* 
 
 */
-@media screen and (max-width: 768px) {
-	.maingames__container {
-		overflow: hidden;
-	}
-	.choice {
-		display: flex;
-		flex-direction: row;
-		overflow-y: auto;
-	}
-	.choice div {
-		width: 100%;
-	}
-	.choice div img {
-		width: 17rem !important;
-		object-fit: cover;
-		height: 17rem !important;
-	}
-}
 
 @media screen and (min-width: 768px) {
 	.maingames__container {
@@ -438,6 +404,38 @@
 }
 
 @media screen and (min-width: 992px) and (min-width: 800px) {
+}
+@media screen and (min-width: 1200px) {
+	.choice {
+		display: flex;
+		flex-direction: row;
+		overflow-y: auto;
+	}
+	.choice div {
+		width: 14%;
+	}
+}
+
+/* Media queries for responsiveness */
+
+/* For Mobile phones */
+@media screen and (max-device-width: 480px) and (min-device-width: 320px) {
+	.choice {
+		display: flex;
+		flex-direction: row;
+		overflow-y: auto;
+	}
+	.choice div {
+		width: 100%;
+	}
+	.choice div img {
+		width: 12rem !important;
+		object-fit: cover;
+		height: 12rem !important;
+	}
+}
+/* For laptop and ipad */
+@media screen and (min-device-width: 821px) and (max-device-width: 1440px) {
 	.choice {
 		display: flex;
 		flex-direction: row;
@@ -452,13 +450,45 @@
 		height: 12rem !important;
 	}
 }
-@media screen and (min-width: 1200px) {
+
+/* For tablet and large phones */
+@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+	.maingames__container {
+		overflow: hidden;
+	}
 	.choice {
 		display: flex;
 		flex-direction: row;
 		overflow-y: auto;
 	}
 	.choice div {
-		width: 14%;
+		width: 30%;
 	}
+	.choice div img {
+		width: 10rem !important;
+		object-fit: cover;
+		height: 12rem !important;
+	}
+}
+/* For Desktop and Large-size screen */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+}
+/* For Desktop and Large-size screen */
+@media screen and (min-device-width: 1200px) {
+	.fixtures__data {
+		height: 2rem;
+	}
+	.header__fixture {
+		height: 4rem;
+	}
+	.header__fixture > img {
+		height: 1.9rem !important;
+		width: 1.9rem !important;
+	}
+	img {
+		height: 1.7rem;
+		width: 1.7rem;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1280px) {
 }
