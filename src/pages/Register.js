@@ -251,7 +251,7 @@ const Register = ({ authorize }) => {
 					</form>
 				</Box>
 				<Box>
-					<Link to="/login" className="li">
+					<Link to="/login" className="text-secondary">
 						<p style={{ textAlign: 'center' }}>
 							Already have an account? Sign in
 						</p>
