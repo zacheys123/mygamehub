@@ -84,7 +84,7 @@ label {
 		max-width: 20rem;
 		background: hsl(200, 50%, 30%);
 		border-radius: 20px !important;
-		opacity: 0.6;
+		opacity: 0.7;
 	}
 	.log > label {
 		color: white !important;
