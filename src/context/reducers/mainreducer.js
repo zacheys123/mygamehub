@@ -169,6 +169,7 @@ export const mainreducer = (state, action) => {
 		case 'MENU':
 			return {
 				...state,
+				loading: true,
 				auth: true,
 			};
 		case 'PLAN':

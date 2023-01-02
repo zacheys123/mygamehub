@@ -160,7 +160,7 @@ img {
 /* For Mobile phones */
 @media screen and (max-width: 480px) and (min-width: 320px) {
 	.header {
-		padding: 1rem !important;
+		padding: 0.5rem !important;
 	}
 	.mynav,
 	.auth,

@@ -4,10 +4,10 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.log {
-	margin-top: 120px !important;
-}
 
+.reg {
+	height: 32rem !important;
+}
 .Auth-form-container {
 	display: flex;
 	justify-content: center;
@@ -19,16 +19,17 @@
 	padding: 30px;
 	border-radius: 25px;
 }
-.log > p {
+.li > p {
 	color: yellow;
 }
-li {
+.li {
 	text-decoration: none !important;
 }
 #emailHelp {
 	color: lightgrey;
 }
-.log > label {
+.form-group > label,
+.form-check > label {
 	color: white !important;
 	margin-bottom: 0.3rem;
 }
@@ -59,7 +60,7 @@ label {
 	font-weight: 600;
 	color: rgb(34, 34, 34);
 }
-.log input[type='text'] {
+.log > input[type='text'] {
 	border: 1px solid grey;
 	width: 100%;
 }
@@ -67,7 +68,7 @@ label {
 /* Media queries for responsiveness */
 
 /* For Mobile phones */
-@media screen and (max-width: 480px) and (min-width: 320px) {
+@media screen and (max-device-width: 480px) and (min-device-width: 320px) {
 	.log {
 		display: flex;
 		margin: 0 !important;
@@ -76,6 +77,7 @@ label {
 		justify-content: center;
 		max-width: 100%;
 		background: url('../assets/lohin.jpg');
+		min-height: 86vh;
 	}
 
 	.Auth-form-container {
@@ -89,16 +91,56 @@ label {
 	}
 	.reg {
 		margin-top: 1.3rem !important;
-		opacity: 0.8;
+		opacity: 0.8 !important;
+	}
+	.hreg {
+		background: linear-gradient(
+			hsl(350, 50%, 70%),
+			hsl(200, 40%, 60%),
+			hsl(20, 80%, 20%)
+		) !important;
+		border-radius: 23px !important;
 	}
 }
-/* For tablet and ipad */
-@media screen and (min-width: 480px) and (max-width: 768) {
+/* For laptop and ipad */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.mainreg {
+		min-height: 77vh !important;
+	}
+	.App {
+		min-height: 75vh !important;
+	}
 }
 
 /* For tablet and ipad */
-@media screen and (min-width: 480px) and (max-width: 768) {
+@media screen and (min-device-width: 480px) and (max-device-width: 768) {
+	.mainreg {
+		min-height: 77vh !important;
+	}
+	.App {
+		min-height: 75vh !important;
+	}
 }
-/* For Mobile phones */
-@media screen and (max-width: 1024) and (min-width: 768px) {
+/* For Desktop and Large-size screen */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+	.mainreg {
+		min-height: 77vh !important;
+	}
+	.App {
+		min-height: 75vh !important;
+	}
+}
+/* For Desktop and Large-size screen */
+@media screen and (min-device-width: 1200px) {
+	.mainreg {
+		min-height: 77vh !important;
+	}
+	.App {
+		min-height: 75vh !important;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1280px) {
+	.mainreg {
+		min-height: 70vh !important;
+	}
 }

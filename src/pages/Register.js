@@ -24,12 +24,12 @@ const initsate = {
 };
 const Register = ({ authorize }) => {
 	const {
-		main: { auth, errorm, mymess },
+		main: { auth, errorm, mymess, loading },
 		setMainContext,
 	} = useMainContext();
 	const [formval, setFormval] = useState(initsate);
 	const [checked, setChecked] = useState(false);
-	const { loading, error } = useSelector((state) => ({
+	const { error } = useSelector((state) => ({
 		...state.auth,
 	}));
 	const [err, setError] = useState('');
@@ -71,6 +71,7 @@ const Register = ({ authorize }) => {
 
 	return (
 		<div
+			className="mainreg"
 			style={{
 				margin: 'auto',
 				padding: '15px',
@@ -79,11 +80,20 @@ const Register = ({ authorize }) => {
 				marginTop: '50px',
 				minHeight: '80vh',
 			}}
-			className="reg"
 		>
-			<Card alignment="center">
-				<h1 align="center">Sign Up</h1>
-				<Box>
+			<Card alignment="center" className="hreg">
+				<h1
+					align="center"
+					style={{
+						color: 'greenyellow',
+						fontWeight: 'bold',
+						marginBottom: '-.8rem',
+						marginTop: '.7rem',
+					}}
+				>
+					Sign Up
+				</h1>
+				<Box className="reg">
 					<form
 						onSubmit={handleSubmit}
 						noValidate
@@ -92,15 +102,24 @@ const Register = ({ authorize }) => {
 						<div className="col-md-12 form-group ">
 							{' '}
 							<TextField
-								inputProps={{ color: 'black' }}
 								label="Firstname"
 								type="text"
 								value={firstname}
 								name="firstname"
 								onChange={oncInputChange}
 								className="form-control "
-								sx={{ margin: 'auto 1rem 1rem auto' }}
+								sx={{
+									margin: 'auto 1rem 1rem auto',
+									height: '-1.4rem !important',
+								}}
 								required
+								variant="standard"
+								InputLabelProps={{
+									style: {
+										marginLeft: '.5rem',
+										color: 'green',
+									},
+								}}
 							/>
 						</div>
 						<div className="col-md-12 form-group  ">
@@ -114,6 +133,13 @@ const Register = ({ authorize }) => {
 								className="form-control"
 								sx={{ margin: 'auto 1rem 1rem auto' }}
 								required
+								variant="standard"
+								InputLabelProps={{
+									style: {
+										marginLeft: '.5rem',
+										color: 'green',
+									},
+								}}
 							/>
 						</div>
 						<div className="col-md-12 form-group  ">
@@ -127,6 +153,13 @@ const Register = ({ authorize }) => {
 								className="form-control "
 								sx={{ margin: 'auto 1rem 1rem auto' }}
 								required
+								variant="standard"
+								InputLabelProps={{
+									style: {
+										marginLeft: '.5rem',
+										color: 'green',
+									},
+								}}
 							/>
 						</div>
 						<div className="col-md-12 form-group ">
@@ -140,6 +173,13 @@ const Register = ({ authorize }) => {
 								className="form-control"
 								sx={{ margin: 'auto 1rem 1rem auto' }}
 								required
+								variant="standard"
+								InputLabelProps={{
+									style: {
+										marginLeft: '.5rem',
+										color: 'green',
+									},
+								}}
 							/>
 						</div>
 						<div className="col-md-12 form-group  ">
@@ -153,6 +193,13 @@ const Register = ({ authorize }) => {
 								className="form-control"
 								sx={{ margin: 'auto 1rem 1rem auto' }}
 								required
+								variant="standard"
+								InputLabelProps={{
+									style: {
+										marginLeft: '.5rem',
+										color: 'green',
+									},
+								}}
 							>
 								{' '}
 							</TextField>
@@ -165,9 +212,10 @@ const Register = ({ authorize }) => {
 							<input
 								style={{
 									textAlign: 'left',
-									width: '2rem',
-									height: '1.2rem',
+									width: '2.5rem !important',
+									height: '2.2rem !important',
 								}}
+								className="form-check-input"
 								type="checkbox"
 								name="check"
 								onChange={(ev) => setChecked(!checked)}
@@ -184,25 +232,26 @@ const Register = ({ authorize }) => {
 						<div className="col-12">
 							<Button
 								type="submit"
-								variant="outlined"
+								variant="contained"
 								style={{ width: '100%' }}
-								className={err ? '' : 'mt-4'}
+								className={
+									err ? 'btn-primary' : 'mt-4 btn btn-primary'
+								}
 							>
-								{loading && (
+								{loading ? (
 									<CircularProgress
-										size="sm"
-										tag="span"
-										className="me-2"
-										role="status"
+										size="20px"
+										sx={{ color: 'white' }}
 									/>
+								) : (
+									'Register'
 								)}
-								Register
 							</Button>
 						</div>
 					</form>
 				</Box>
 				<Box>
-					<Link to="/login">
+					<Link to="/login" className="li">
 						<p style={{ textAlign: 'center' }}>
 							Already have an account? Sign in
 						</p>
