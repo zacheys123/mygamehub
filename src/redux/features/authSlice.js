@@ -39,7 +39,7 @@ export const register = createAsyncThunk(
 		try {
 			const response = await api.signup(formval);
 			toast.success('Registered Successfully');
-			navigate('/package-plan');
+			navigate('/v2/package-plan');
 			setMainContext({ type: 'MENU' });
 			return response.data;
 		} catch (error) {
