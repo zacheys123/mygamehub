@@ -1,5 +1,11 @@
 .App {
 	background-color: white;
+	background: url('../assets/login.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.log {
+	margin-top: 120px !important;
 }
 
 .Auth-form-container {
@@ -8,9 +14,24 @@
 	align-items: center;
 	max-width: 44vw;
 	box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+	background: hsl(200, 50%, 30%);
+	opacity: 0.9;
 	padding: 30px;
+	border-radius: 25px;
 }
-
+.log > p {
+	color: yellow;
+}
+li {
+	text-decoration: none !important;
+}
+#emailHelp {
+	color: lightgrey;
+}
+.log > label {
+	color: white !important;
+	margin-bottom: 0.3rem;
+}
 .Auth-form {
 	width: 420px;
 	box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
@@ -29,7 +50,7 @@
 	text-align: center;
 	margin-bottom: 1em;
 	font-size: 24px;
-	color: rgb(34, 34, 34);
+	color: rgb(41, 146, 206);
 	font-weight: 800;
 }
 
@@ -47,6 +68,29 @@ label {
 
 /* For Mobile phones */
 @media screen and (max-width: 480px) and (min-width: 320px) {
+	.log {
+		display: flex;
+		margin: 0 !important;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 100%;
+		background: url('../assets/lohin.jpg');
+	}
+
+	.Auth-form-container {
+		max-width: 20rem;
+		background: hsl(200, 50%, 30%);
+		border-radius: 20px !important;
+		opacity: 0.6;
+	}
+	.log > label {
+		color: white !important;
+	}
+	.reg {
+		margin-top: 1.3rem !important;
+		opacity: 0.8;
+	}
 }
 /* For tablet and ipad */
 @media screen and (min-width: 480px) and (max-width: 768) {

@@ -72,8 +72,7 @@ const Login = () => {
 				padding: '15px',
 				maxWidth: '450px',
 				alignContent: 'center',
-				marginTop: '120px',
-				minHeight: '72.5vh',
+				minHeight: '86.5vh',
 			}}
 			className="log"
 		>
@@ -97,7 +96,7 @@ const Login = () => {
 							placeholder="Email"
 							onChange={oncInputChange}
 						/>
-						<small id="emailHelp" className="form-text text-muted">
+						<small id="emailHelp" className="form-text ">
 							Enter Email or Phone Number
 						</small>
 					</div>
@@ -142,7 +141,7 @@ const Login = () => {
 						</label>
 					</div>
 					<Box style={{ textAlign: 'center', marginTop: '1rem' }}>
-						<Link to="/register">
+						<Link to="/register" className="li">
 							<p>Don't have an account? Sign up</p>
 						</Link>
 					</Box>

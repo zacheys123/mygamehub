@@ -79,6 +79,7 @@ const Register = ({ authorize }) => {
 				marginTop: '50px',
 				minHeight: '80vh',
 			}}
+			className="reg"
 		>
 			<Card alignment="center">
 				<h1 align="center">Sign Up</h1>
@@ -91,6 +92,7 @@ const Register = ({ authorize }) => {
 						<div className="col-md-12 form-group ">
 							{' '}
 							<TextField
+								inputProps={{ color: 'black' }}
 								label="Firstname"
 								type="text"
 								value={firstname}
