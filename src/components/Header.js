@@ -107,7 +107,7 @@ const Header = (props) => {
 				style={{ padding: '0 1rem 0.3rem 1rem' }}
 			>
 				<Box>
-					{showmenu && (
+					{!showmenu && (
 						<>
 							{!moreinfo ? (
 								<MenuIcon
