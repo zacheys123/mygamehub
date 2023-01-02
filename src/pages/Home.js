@@ -38,7 +38,7 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="home" style={{ minHeight: '84.7vh' }}>
+		<div className="home" style={{ minHeight: '85.7vh !important' }}>
 			{/*// {user?.result?._id && user?.result?._id ? (
 			 
 			// ) : (
