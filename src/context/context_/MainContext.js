@@ -28,6 +28,7 @@ const initialState = {
 	amateur: false,
 	world: false,
 	premium: false,
+	showmenu: false,
 };
 const MainProvider = createContext(initialState);
 const MainContext = ({ children }) => {

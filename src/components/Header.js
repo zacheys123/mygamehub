@@ -23,7 +23,7 @@ import {
 
 const Header = (props) => {
 	const {
-		main: { istheme, contact, auth, userInfo },
+		main: { istheme, contact, auth, userInfo, showmenu },
 		setMainContext,
 	} = useMainContext();
 	const [profile, setProfile] = useState(false);
@@ -91,10 +91,10 @@ const Header = (props) => {
 		}
 	});
 	useEffect(() => {
-		switch (userInfo) {
-			case '':
-				setNoPlan(allrefs);
+		if (userInfo) {
+			setMainContext({ type: 'SHOWMENU' });
 		}
+		return setMainContext({ type: 'CLOSEMENU' });
 	}, [userInfo]);
 
 	return (
@@ -107,16 +107,20 @@ const Header = (props) => {
 				style={{ padding: '0 1rem 0.3rem 1rem' }}
 			>
 				<Box>
-					{!moreinfo ? (
-						<MenuIcon
-							sx={{ marginRight: '4rem', cursor: 'pointer' }}
-							onClick={() => setMore((prev) => !prev)}
-						/>
-					) : (
-						<CloseIcon
-							sx={{ marginRight: '4rem', cursor: 'pointer' }}
-							onClick={() => setMore((prev) => !prev)}
-						/>
+					{showmenu && (
+						<>
+							{!moreinfo ? (
+								<MenuIcon
+									sx={{ marginRight: '4rem', cursor: 'pointer' }}
+									onClick={() => setMore((prev) => !prev)}
+								/>
+							) : (
+								<CloseIcon
+									sx={{ marginRight: '4rem', cursor: 'pointer' }}
+									onClick={() => setMore((prev) => !prev)}
+								/>
+							)}
+						</>
 					)}
 
 					{moreinfo && (

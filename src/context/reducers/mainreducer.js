@@ -202,6 +202,16 @@ export const mainreducer = (state, action) => {
 				...state,
 				premium: !state.premium,
 			};
+		case 'SHOWMENU':
+			return {
+				...state,
+				showmenu: true,
+			};
+		case 'CLOSEMENU':
+			return {
+				...state,
+				showmenu: false,
+			};
 
 		default:
 			return { ...state };

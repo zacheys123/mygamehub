@@ -31,7 +31,7 @@ const ConfirmData = ({ child_userdata }) => {
 	});
 	const prevData = useRef({});
 	const {
-		main: { loading, loader, userInfo },
+		main: { loading, loader, userInfo, showmenu },
 		setMainContext,
 	} = useMainContext();
 	const handlePlan = (ev) => {
@@ -51,6 +51,7 @@ const ConfirmData = ({ child_userdata }) => {
 				world: '',
 				premium: '',
 			});
+			setMainContext({ type: 'SHOWMENU' });
 
 			const profile = { userId: myid?.result?._id, free: plan.free };
 			console.log(profile.userId);
@@ -74,7 +75,7 @@ const ConfirmData = ({ child_userdata }) => {
 				free: plan.amateur,
 			};
 			console.log(profile.userId);
-
+			setMainContext({ type: 'SHOWMENU' });
 			createPlan(profile, navigate, loading, setMainContext);
 		},
 		[plan.amateur],
@@ -90,7 +91,7 @@ const ConfirmData = ({ child_userdata }) => {
 			});
 			const profile = { userId: myid?.result?._id, free: plan.world };
 			console.log(profile.userId);
-
+			setMainContext({ type: 'SHOWMENU' });
 			createPlan(profile, navigate, loading, setMainContext);
 		},
 		[plan.world],
@@ -110,7 +111,7 @@ const ConfirmData = ({ child_userdata }) => {
 				free: plan.premium,
 			};
 			console.log(profile.userId);
-
+			setMainContext({ type: 'SHOWMENU' });
 			createPlan(profile, navigate, loading, setMainContext);
 		},
 		[plan.premium],
