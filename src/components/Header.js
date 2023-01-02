@@ -318,6 +318,48 @@ const Header = (props) => {
 									Share Videos
 								</Button>
 							</Link>
+							<Link
+								className={
+									user?.result?._id ? 'item about' : 'disabled'
+								}
+								to="/standings"
+							>
+								{' '}
+								<Button
+									onClick={() => setMore((prev) => !prev)}
+									style={{
+										color: !istheme ? 'white' : 'darkgreen',
+										border: !istheme
+											? '1px solid lightgrey'
+											: '1px solid violet',
+									}}
+									variant="outlined"
+									size="small"
+								>
+									About Us
+								</Button>
+							</Link>
+							<Link
+								className={
+									user?.result?._id ? 'item contacts' : 'disabled'
+								}
+								to="/standings"
+							>
+								{' '}
+								<Button
+									onClick={() => setMore((prev) => !prev)}
+									style={{
+										color: !istheme ? 'white' : 'darkgreen',
+										border: !istheme
+											? '1px solid lightgrey'
+											: '1px solid violet',
+									}}
+									variant="outlined"
+									size="small"
+								>
+									Contact Us
+								</Button>
+							</Link>
 						</motion.div>
 					)}
 				</Box>
@@ -437,7 +479,7 @@ const Header = (props) => {
 					</Box>
 				</Box>
 				<div
-					className={user?.result?._id ? 'd-block' : 'd-none'}
+					className={user?.result?._id ? 'd-block myprof' : 'd-none'}
 					style={{ position: 'relative' }}
 				>
 					<Stack

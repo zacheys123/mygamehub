@@ -83,6 +83,10 @@ img {
 	opacity: 1;
 	color: green;
 }
+.about,
+.contacts {
+	display: none;
+}
 
 .avatar {
 	width: 2rem;
@@ -130,7 +134,8 @@ img {
 .theming {
 	margin-left: 1rem;
 }
-@media screen and (min-width: 768px) {
+/* For tablet and ipad */
+@media screen and (min-width: 480px) and (max-width: 768) {
 	.menu {
 		display: none;
 	}
@@ -152,34 +157,33 @@ img {
 		border-radius: 50%;
 	}
 }
-@media screen and (max-width: 992px) and (min-width: 768px) {
-	.menu {
+/* For Mobile phones */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+	.header {
+		padding: 1rem !important;
+	}
+	.mynav,
+	.auth,
+	.myprof {
 		display: none;
 	}
-	.theming {
-		display: none;
+	.about,
+	.contacts {
+		display: block;
 	}
-
-	.navbrand {
-		flex: 9 !important;
-		font-family: Times, serif;
-		font-size: 20px !important;
-		font-weight: 1200 !important;
+	.logo {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
 	}
-	img {
-		height: 40px !important;
-		width: 40px !important;
-		border-radius: 50%;
+	.logo > h2 {
+		font-size: 1rem !important;
 	}
-	.avatar {
-		width: 3rem;
-		height: 3rem;
-		border-radius: 50%;
-		background: red;
-		text-align: center;
-		font-size: 1.9rem;
+	.logo > img {
+		font-size: 0.8rem !important;
 	}
 }
+
 @media screen and (min-width: 992px) {
 	.avatar {
 		width: 3rem;

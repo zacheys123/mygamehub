@@ -6,7 +6,7 @@ const Footer = () => {
 				style={{ backgroundColor: 'rgba(233, 340, 430, 0.8)' }}
 			>
 				© 2020 Copyright:
-				<a className="text-light" href="/">
+				<a className="text-dark" href="/">
 					GameHub.com
 				</a>
 			</div>
